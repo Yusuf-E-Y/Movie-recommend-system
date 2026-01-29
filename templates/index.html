@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <h1>Discover Your Next Favorite Movie</h1>
+    <p>Select 5 movies you've watched recently, rate them, and let our AI find the perfect match for you.</p>
+</section>
+
+<section class="workspace">
+    <!-- Left: Movie Selection Grid -->
+    <div class="movie-grid-container">
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="movieSearch" placeholder="Search movies...">
+        </div>
+        <div id="movieGrid" class="movie-grid">
+            <!-- Movies injected via JS -->
+            <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Loading movies...</div>
+        </div>
+    </div>
+
+    <!-- Right: Selected & Predictions -->
+    <div class="sidebar">
+        <div class="sticky-sidebar">
+            <div class="card selection-card">
+                <h3>Your Selection <span id="selectionCount">(0/5)</span></h3>
+                <div id="selectedMovies" class="selected-list">
+                    <p class="empty-state">Click movies on the left to add them.</p>
+                </div>
+                <button id="getRecommendations" class="btn-primary" disabled>
+                    <i class="fas fa-wand-magic-sparkles"></i> Get Recommendations
+                </button>
+            </div>
+
+            <div id="resultsSection" class="results-container hidden">
+                <div class="card result-card success">
+                    <h4><i class="fas fa-heart"></i> You'll Love</h4>
+                    <div id="recommendationsList" class="mini-list"></div>
+                </div>
+                <div class="card result-card danger">
+                    <h4><i class="fas fa-times-circle"></i> Avoid</h4>
+                    <div id="avoidsList" class="mini-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/script.js"></script>
+{% endblock %}

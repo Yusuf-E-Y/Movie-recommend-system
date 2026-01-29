@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="about-container">
+    <div class="card">
+        <h2>About CineMatch AI</h2>
+        <p>CineMatch AI is a demonstration of a Content-Based Filtering recommendation system built with Flask and
+            Scikit-Learn.</p>
+
+        <h3>How it Works</h3>
+        <ul>
+            <li><strong>Data Analysis:</strong> We analyze movie genres and descriptions using TF-IDF (Term
+                Frequency-Inverse Document Frequency) to create a mathematical vector for each movie.</li>
+            <li><strong>User Profiling:</strong> Based on your ratings, we build a weighted user profile vector.
+                Positive ratings pull the profile towards the movie's features, while negative ratings push it away.
+            </li>
+            <li><strong>Similarity Search:</strong> We use Cosine Similarity to compare your profile against thousands
+                of movies to find the closest matches in our multi-dimensional vector space.</li>
+        </ul>
+
+        <h3>Tech Stack</h3>
+        <ul class="tech-stack">
+            <li><i class="fab fa-python"></i> Python</li>
+            <li><i class="fas fa-flask"></i> Flask</li>
+            <li><i class="fas fa-brain"></i> Scikit-Learn</li>
+            <li><i class="fab fa-js"></i> Vanilla JS</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
