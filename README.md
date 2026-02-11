@@ -1,5 +1,5 @@
 # MRS (Movie Recommend System)
-![MRS UI Mockup](static/mrs_mockup.png)
+![MRS UI Mockup](Assets/asset1.png)
 **MRS** is an intelligent web-based tool for movie recommendations and dataset management. It utilizes Content-Based Filtering (TF-IDF & Cosine Similarity) to analyze movie genres and suggest titles based on a user's recent watch history and ratings. Users can also manage the underlying dataset by adding new movies or editing existing ratings.
 ## Technical Stack
 *   **Backend**: Python, Flask
